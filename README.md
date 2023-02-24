@@ -19,7 +19,7 @@ Start the application: `mvn spring-boot:run`
 
 
 
-The API will be available at `http://localhost:8080`  
+The API will be available at `http://localhost:8083`  
 
 
 **API Endpoints:**  
