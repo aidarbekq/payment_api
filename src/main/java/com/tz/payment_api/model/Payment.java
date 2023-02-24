@@ -39,4 +39,24 @@ public class Payment {
     public PaymentStatus getStatus() {
         return status;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public void setRecipientAccount(String recipientAccount) {
+        this.recipientAccount = recipientAccount;
+    }
+
+    public void setSenderAccount(String senderAccount) {
+        this.senderAccount = senderAccount;
+    }
+
+    public void setStatus(PaymentStatus status) {
+        this.status = status;
+    }
 }
