@@ -2,7 +2,7 @@ package com.tz.payment_api.enums;
 
 public enum PaymentStatus {
     PROCESSING("Processing"),
-    SUCCESS("Success"),
+    CONFIRMED("Processing"),
     CANCELED("Canceled");
 
     private String status;
