@@ -9,9 +9,6 @@ Install dependencies: `mvn clean install`
 
 **Configure the application.properties file with the correct database settings**
 
-    Set up a PostgreSQL database
-    Configure the application.properties file with the correct database settings
-
 
 **Usage**
 
@@ -19,12 +16,14 @@ Start the application: `mvn spring-boot:run`
 
 
 
-The API will be available at `http://localhost:8083`  
+The API will be available at `http://localhost:8083/api/payments`  
 
 
 **API Endpoints:**  
 
 _POST /create_  
+`http://localhost:8083/api/payments/create`  
+
 
 Example of request to create:  
 
@@ -39,11 +38,18 @@ Example of request to create:
 
 
 _GET  /payments/{id}_  
-  
+`http://localhost:8083/api/payments/{id}`  
+
+
 
 _POST  /{id}/confirm_  
+`http://localhost:8083/api/payments/{id}/confirm`  
+
+
 
 _POST {id}/cancel_  
+`http://localhost:8083/api/payments/{id}/cancel`  
+
 
 
 
