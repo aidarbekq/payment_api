@@ -1,4 +1,4 @@
-package com.tz.payment_api.service;
+package com.tz.payment_api.services;
 
 import com.tz.payment_api.dto.PaymentRequestDto;
 import com.tz.payment_api.model.Payment;
