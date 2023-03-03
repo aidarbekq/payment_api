@@ -4,7 +4,7 @@ import com.tz.payment_api.dto.PaymentRequestDto;
 import com.tz.payment_api.dto.PaymentResponseDto;
 import com.tz.payment_api.excptions.PaymentNotFoundException;
 import com.tz.payment_api.model.Payment;
-import com.tz.payment_api.service.PaymentService;
+import com.tz.payment_api.services.PaymentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
