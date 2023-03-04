@@ -3,6 +3,7 @@ package com.tz.payment_api.controller;
 import com.tz.payment_api.dto.PaymentRequestDto;
 import com.tz.payment_api.dto.PaymentResponseDto;
 import com.tz.payment_api.excptions.PaymentNotFoundException;
+import com.tz.payment_api.excptions.PaymentProcessingException;
 import com.tz.payment_api.model.Payment;
 import com.tz.payment_api.services.PaymentService;
 import org.springframework.http.HttpStatus;
@@ -20,11 +21,16 @@ public class PaymentController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<PaymentResponseDto> createPayment(@RequestBody PaymentRequestDto paymentRequestDto) {
-        Payment payment = paymentService.createPayment(paymentRequestDto);
-        PaymentResponseDto paymentResponseDto = PaymentResponseDto.fromPayment(payment);
-        return ResponseEntity.status(HttpStatus.CREATED).body(paymentResponseDto);
+    public ResponseEntity<?> createPayment(@RequestBody PaymentRequestDto paymentRequestDto) {
+        try {
+            Payment payment = paymentService.createPayment(paymentRequestDto);
+            PaymentResponseDto paymentResponseDto = PaymentResponseDto.fromPayment(payment);
+            return ResponseEntity.status(HttpStatus.CREATED).body(paymentResponseDto);
+        } catch (PaymentProcessingException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
     }
+
 
 
     @PostMapping("/{id}/confirm")
