@@ -7,6 +7,7 @@ public class PaymentRequestDto {
     private String senderAccount;
     private String recipientAccount;
     private BigDecimal amount;
+    private Long uslugaId;
 
     public PaymentRequestDto() {}
 
@@ -14,6 +15,14 @@ public class PaymentRequestDto {
         this.senderAccount = senderAccount;
         this.recipientAccount = recipientAccount;
         this.amount = amount;
+    }
+
+    public Long getUslugaId() {
+        return uslugaId;
+    }
+
+    public void setUslugaId(Long uslugaId) {
+        this.uslugaId = uslugaId;
     }
 
     public String getRecipientAccount() {
