@@ -24,6 +24,11 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private PaymentStatus status;
+
+    @Column(name = "usluga_id")
+    private Long uslugaId;
+
+
     public Long getId() {
         return id;
     }
@@ -58,5 +63,13 @@ public class Payment {
 
     public void setStatus(PaymentStatus status) {
         this.status = status;
+    }
+
+    public Long getUslugaId() {
+        return uslugaId;
+    }
+
+    public void setUslugaId(Long uslugaId) {
+        this.uslugaId = uslugaId;
     }
 }
