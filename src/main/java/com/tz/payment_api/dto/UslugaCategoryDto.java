@@ -8,7 +8,6 @@ public class UslugaCategoryDto {
     private Long id;
     private String name;
     private UslugaCategory parent_id;
-    private List<UslugaDto> uslugi;
 
     public String getName() {
         return name;
@@ -27,16 +26,9 @@ public class UslugaCategoryDto {
         return id;
     }
 
-    public List<UslugaDto> getUslugi() {
-        return uslugi;
-    }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setUslugi(List<UslugaDto> uslugi) {
-        this.uslugi = uslugi;
     }
 
     public void setId(Long id) {
@@ -45,11 +37,10 @@ public class UslugaCategoryDto {
 
     public UslugaCategoryDto() {}
 
-    public UslugaCategoryDto(Long id, String name, UslugaCategory parent_id, List<UslugaDto> uslugi) {
+    public UslugaCategoryDto(Long id, String name, UslugaCategory parent_id) {
         this.id = id;
         this.name = name;
         this.parent_id = parent_id;
-        this.uslugi = uslugi;
     }
 }
 
