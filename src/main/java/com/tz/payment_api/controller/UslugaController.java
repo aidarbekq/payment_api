@@ -21,17 +21,12 @@ import java.util.List;
 public class UslugaController {
     private final UslugaService uslugaService;
     private final UslugaCategoryService uslugaCategoryService;
-    private final UslugaMapper uslugaMapper;
-    private final UslugaCategoryMapper uslugaCategoryMapper;
 
     @Autowired
     public UslugaController(UslugaService uslugaService,
-                            UslugaCategoryService uslugaCategoryService, UslugaMapper uslugaMapper,
-                            UslugaCategoryMapper uslugaCategoryMapper) {
+                            UslugaCategoryService uslugaCategoryService) {
         this.uslugaService = uslugaService;
         this.uslugaCategoryService = uslugaCategoryService;
-        this.uslugaMapper = uslugaMapper;
-        this.uslugaCategoryMapper = uslugaCategoryMapper;
     }
 
     @GetMapping("/uslugi")
