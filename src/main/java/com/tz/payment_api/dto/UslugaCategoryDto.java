@@ -1,25 +1,20 @@
 package com.tz.payment_api.dto;
 
-import com.tz.payment_api.model.UslugaCategory;
-
-import java.util.List;
-
 public class UslugaCategoryDto {
     private Long id;
     private String name;
-    private UslugaCategoryDto parent_id;
+    private UslugaCategoryDto parentCategory;
 
     public String getName() {
         return name;
     }
 
-
-    public UslugaCategoryDto getParent_id() {
-        return parent_id;
+    public UslugaCategoryDto getParentCategory() {
+        return parentCategory;
     }
 
-    public void setParent_id(UslugaCategoryDto parent_id) {
-        this.parent_id = parent_id;
+    public void setParentCategory(UslugaCategoryDto parentCategory) {
+        this.parentCategory = parentCategory;
     }
 
     public Long getId() {
@@ -37,10 +32,10 @@ public class UslugaCategoryDto {
 
     public UslugaCategoryDto() {}
 
-    public UslugaCategoryDto(Long id, String name, UslugaCategoryDto parent_id) {
+    public UslugaCategoryDto(Long id, String name, UslugaCategoryDto parentCategory) {
         this.id = id;
         this.name = name;
-        this.parent_id = parent_id;
+        this.parentCategory = parentCategory;
     }
 }
 
