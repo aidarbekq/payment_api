@@ -2,6 +2,7 @@ package com.tz.payment_api.model;
 
 import jakarta.persistence.*;
 
+import javax.validation.constraints.Pattern;
 import java.math.BigDecimal;
 
 @Entity
@@ -21,6 +22,7 @@ public class Usluga {
     @Column(name = "min_amount")
     private BigDecimal minAmount;
 
+    @Pattern(regexp = "\\d{10}")
     @Column(name = "requisite_mask")
     private String requisiteMask;
 
