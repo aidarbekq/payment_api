@@ -11,17 +11,20 @@ public class PaymentResponseDto {
     private String recipientAccount;
     private BigDecimal amount;
     private PaymentStatus status;
+    private Long uslugaId;
+
 
     public PaymentResponseDto() {}
 
     public PaymentResponseDto(Long id, String senderAccount,
                               String recipientAccount,
-                              BigDecimal amount, PaymentStatus status) {
+                              BigDecimal amount, PaymentStatus status, Long uslugaId) {
         this.id = id;
         this.senderAccount = senderAccount;
         this.recipientAccount = recipientAccount;
         this.amount = amount;
         this.status = status;
+        this.uslugaId = uslugaId;
     }
 
     public static PaymentResponseDto fromPayment(Payment payment) {
@@ -30,9 +33,20 @@ public class PaymentResponseDto {
                 payment.getSenderAccount(),
                 payment.getRecipientAccount(),
                 payment.getAmount(),
-                payment.getStatus()
+                payment.getStatus(),
+                payment.getUslugaId()
         );
     }
+
+
+    public Long getUslugaId() {
+        return uslugaId;
+    }
+
+    public void setUslugaId(Long uslugaId) {
+        this.uslugaId = uslugaId;
+    }
+
 
     public Long getId() {
         return id;
