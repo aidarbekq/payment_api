@@ -5,3 +5,18 @@ CREATE TABLE payments (
                           amount NUMERIC(10, 2) NOT NULL,
                           status VARCHAR(20) NOT NULL
 );
+
+CREATE TABLE uslugi (
+                        id SERIAL PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        description TEXT,
+                        min_amount NUMERIC(10, 2),
+                        requisite_mask VARCHAR(255),
+                        category_id BIGINT REFERENCES usluga_categories(id)
+);
+
+CREATE TABLE usluga_categories (
+                                   id SERIAL PRIMARY KEY,
+                                   name VARCHAR(255) NOT NULL,
+                                   parent_id BIGINT REFERENCES usluga_categories(id)
+);
