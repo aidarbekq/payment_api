@@ -2,7 +2,9 @@ package com.tz.payment_api.model;
 
 import jakarta.persistence.*;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Entity
@@ -22,7 +24,9 @@ public class Usluga {
     @Column(name = "min_amount")
     private BigDecimal minAmount;
 
-    @Pattern(regexp = "\\d{10}")
+    @NotNull
+    @Size(min = 10)
+    @Pattern(regexp = "\\d{10}", message = "Реквизит должен содержать ровно 10 цифр")
     @Column(name = "requisite_mask")
     private String requisiteMask;
 
