@@ -16,7 +16,7 @@ Start the application: `mvn spring-boot:run`
 
 
 
-The API will be available at `http://localhost:8083/api/payments`  
+The API will be available at `http://localhost:8083`  
 
 
 **API Endpoints:**  
@@ -32,7 +32,7 @@ Example of request to create:
 `{
 "senderAccount": "test_sender_acc",
 "uslugaId": 1,
-"amount": 2000
+"amount": 200
 }`  
   
 
