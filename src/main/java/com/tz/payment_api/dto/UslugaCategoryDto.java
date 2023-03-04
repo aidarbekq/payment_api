@@ -7,18 +7,18 @@ import java.util.List;
 public class UslugaCategoryDto {
     private Long id;
     private String name;
-    private UslugaCategory parent_id;
+    private UslugaCategoryDto parent_id;
 
     public String getName() {
         return name;
     }
 
 
-    public UslugaCategory getParent_id() {
+    public UslugaCategoryDto getParent_id() {
         return parent_id;
     }
 
-    public void setParent_id(UslugaCategory parent_id) {
+    public void setParent_id(UslugaCategoryDto parent_id) {
         this.parent_id = parent_id;
     }
 
@@ -37,7 +37,7 @@ public class UslugaCategoryDto {
 
     public UslugaCategoryDto() {}
 
-    public UslugaCategoryDto(Long id, String name, UslugaCategory parent_id) {
+    public UslugaCategoryDto(Long id, String name, UslugaCategoryDto parent_id) {
         this.id = id;
         this.name = name;
         this.parent_id = parent_id;
