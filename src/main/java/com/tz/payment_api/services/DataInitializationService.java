@@ -44,24 +44,24 @@ public class DataInitializationService {
         uslugaCategoryRepository.save(roamingCategory);
 
         Usluga callPackage60 = new Usluga("Пакет 60 минут", "new ser", new BigDecimal(200),
-                "12335647", callsCategory);
+                "1234567890", callsCategory);
 
         Usluga callBlackList = new Usluga("Черный список", "black list fun", new BigDecimal(50),
-        "12335647", callsCategory);
+                "1234567890", callsCategory);
 
         Usluga callPackage30 = new Usluga("Пакет 30 минут","new ser",
-                new BigDecimal(100), "12335647", callsCategory);
+                new BigDecimal(100), "1234567890", callsCategory);
 
         Usluga cinemaTicket = new Usluga("Кинотеатр","новые фильмы",
-                new BigDecimal(500),"12335647",cinemaCategory);
+                new BigDecimal(500),"1234567890",cinemaCategory);
 
         Usluga roamingPackage20GB = new Usluga("Пакет 20 ГБ", "new package",
-                BigDecimal.valueOf(1000), "12335647", roamingCategory );
+                BigDecimal.valueOf(1000), "1234567890", roamingCategory );
 
         Usluga internetPackage10GB = new Usluga("Пакет 10 ГБ","new package",
-               BigDecimal.valueOf(200), "12335647", internetCategory);
+               BigDecimal.valueOf(200), "1234567890", internetCategory);
         Usluga internetPackage30GB = new Usluga("Пакет 30 ГБ", "new package",
-                 BigDecimal.valueOf(550),"12335647", internetCategory);
+                 BigDecimal.valueOf(550),"1234567890", internetCategory);
 
         uslugaRepository.save(callPackage60);
         uslugaRepository.save(callBlackList);
