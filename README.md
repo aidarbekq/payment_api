@@ -20,6 +20,8 @@ The API will be available at `http://localhost:8083/api/payments`
 
 
 **API Endpoints:**  
+**PAYMENT ENDPOINTS**  
+
 
 _POST /create_  
 `http://localhost:8083/api/payments/create`  
@@ -29,7 +31,7 @@ Example of request to create:
 
 `{
 "senderAccount": "test_sender_acc",
-"recipientAccount": "test_recep_acc",
+"uslugaId": 1,
 "amount": 2000
 }`  
   
@@ -49,6 +51,27 @@ _POST  /{id}/confirm_
 
 _POST {id}/cancel_  
 `http://localhost:8083/api/payments/{id}/cancel`  
+
+**USLUGA ENDPOINTS**  
+
+_GET  /uslugi_  
+`http://localhost:8083/api/uslugi`  
+
+_GET  /uslugi/{id}_  
+`http://localhost:8083/api/uslugi/{id}`  
+  
+
+_GET  /uslugi/{categoryId}_  
+`http://localhost:8083/api/uslugi/{categoryId}`  
+
+**CATEGORY ENDPOINTS**  
+
+_GET  /categories_  
+`http://localhost:8083/api/categories`  
+
+_GET  /categories/{id}_  
+`http://localhost:8083/api/categories/{id}`  
+
 
 
 
