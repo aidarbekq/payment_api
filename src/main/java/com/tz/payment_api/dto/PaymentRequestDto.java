@@ -5,16 +5,15 @@ import java.math.BigDecimal;
 public class PaymentRequestDto {
 
     private String senderAccount;
-    private String recipientAccount;
     private BigDecimal amount;
     private Long uslugaId;
 
     public PaymentRequestDto() {}
 
-    public PaymentRequestDto(String senderAccount, String recipientAccount, BigDecimal amount) {
+    public PaymentRequestDto(String senderAccount, BigDecimal amount, Long uslugaId) {
         this.senderAccount = senderAccount;
-        this.recipientAccount = recipientAccount;
         this.amount = amount;
+        this.uslugaId = uslugaId;
     }
 
     public Long getUslugaId() {
@@ -25,20 +24,12 @@ public class PaymentRequestDto {
         this.uslugaId = uslugaId;
     }
 
-    public String getRecipientAccount() {
-        return recipientAccount;
-    }
-
     public void setSenderAccount(String senderAccount) {
         this.senderAccount = senderAccount;
     }
 
     public String getSenderAccount() {
         return senderAccount;
-    }
-
-    public void setRecipientAccount(String recipientAccount) {
-        this.recipientAccount = recipientAccount;
     }
 
     public BigDecimal getAmount() {

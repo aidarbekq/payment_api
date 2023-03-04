@@ -44,7 +44,6 @@ public class PaymentServiceImpl implements PaymentService {
         }
         Payment payment = new Payment();
         payment.setSenderAccount(paymentRequestDto.getSenderAccount());
-        payment.setRecipientAccount(paymentRequestDto.getRecipientAccount());
         payment.setAmount(paymentRequestDto.getAmount());
         payment.setStatus(PaymentStatus.PROCESSING);
         payment.setUslugaId(usluga.getId());

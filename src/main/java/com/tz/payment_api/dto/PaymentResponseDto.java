@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 public class PaymentResponseDto {
     private Long id;
     private String senderAccount;
-    private String recipientAccount;
     private BigDecimal amount;
     private PaymentStatus status;
     private Long uslugaId;
@@ -17,11 +16,9 @@ public class PaymentResponseDto {
     public PaymentResponseDto() {}
 
     public PaymentResponseDto(Long id, String senderAccount,
-                              String recipientAccount,
                               BigDecimal amount, PaymentStatus status, Long uslugaId) {
         this.id = id;
         this.senderAccount = senderAccount;
-        this.recipientAccount = recipientAccount;
         this.amount = amount;
         this.status = status;
         this.uslugaId = uslugaId;
@@ -31,7 +28,6 @@ public class PaymentResponseDto {
         return new PaymentResponseDto(
                 payment.getId(),
                 payment.getSenderAccount(),
-                payment.getRecipientAccount(),
                 payment.getAmount(),
                 payment.getStatus(),
                 payment.getUslugaId()
@@ -62,14 +58,6 @@ public class PaymentResponseDto {
 
     public void setSenderAccount(String senderAccount) {
         this.senderAccount = senderAccount;
-    }
-
-    public String getRecipientAccount() {
-        return recipientAccount;
-    }
-
-    public void setRecipientAccount(String recipientAccount) {
-        this.recipientAccount = recipientAccount;
     }
 
     public BigDecimal getAmount() {

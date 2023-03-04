@@ -15,9 +15,6 @@ public class Payment {
     @Column(name = "sender_account")
     private String senderAccount;
 
-    @Column(name = "recipient_account")
-    private String recipientAccount;
-
     @Column(name = "amount")
     private BigDecimal amount;
 
@@ -35,9 +32,7 @@ public class Payment {
     public String getSenderAccount() {
         return senderAccount;
     }
-    public String getRecipientAccount() {
-        return recipientAccount;
-    }
+
     public BigDecimal getAmount() {
         return amount;
     }
@@ -51,10 +46,6 @@ public class Payment {
 
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
-    }
-
-    public void setRecipientAccount(String recipientAccount) {
-        this.recipientAccount = recipientAccount;
     }
 
     public void setSenderAccount(String senderAccount) {
