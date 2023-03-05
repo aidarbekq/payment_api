@@ -1,8 +1,5 @@
 package com.tz.payment_api.dto;
 
-import com.tz.payment_api.model.UslugaCategory;
-import com.tz.payment_api.services.UslugaCategoryServiceImpl;
-
 import java.math.BigDecimal;
 
 public class UslugaDto {

@@ -1,7 +1,6 @@
 package com.tz.payment_api.model;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity

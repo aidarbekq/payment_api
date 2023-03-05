@@ -4,7 +4,6 @@ import com.tz.payment_api.model.Usluga;
 import com.tz.payment_api.model.UslugaCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository

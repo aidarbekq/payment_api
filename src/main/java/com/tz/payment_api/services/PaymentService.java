@@ -2,7 +2,6 @@ package com.tz.payment_api.services;
 
 import com.tz.payment_api.dto.PaymentRequestDto;
 import com.tz.payment_api.model.Payment;
-
 import java.math.BigDecimal;
 
 public interface PaymentService {

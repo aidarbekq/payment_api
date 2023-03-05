@@ -2,7 +2,6 @@ package com.tz.payment_api.dto;
 
 import com.tz.payment_api.enums.PaymentStatus;
 import com.tz.payment_api.model.Payment;
-
 import java.math.BigDecimal;
 
 public class PaymentResponseDto {

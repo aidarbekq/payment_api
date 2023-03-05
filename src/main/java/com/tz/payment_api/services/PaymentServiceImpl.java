@@ -11,7 +11,6 @@ import com.tz.payment_api.repository.PaymentRepository;
 import com.tz.payment_api.repository.UslugaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 
 @Service
@@ -35,10 +34,8 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment createPayment(PaymentRequestDto paymentRequestDto) {
-        System.out.println(paymentRequestDto.getUslugaId());
         Usluga usluga = uslugaRepository.findById(paymentRequestDto.getUslugaId())
                 .orElseThrow(() -> new UslugaNotFoundException(paymentRequestDto.getUslugaId()));
-        System.out.println(usluga);
         if (!canPaymentBeProcessed(usluga.getId(), paymentRequestDto.getAmount())) {
             throw new PaymentProcessingException("Payment cannot be processed for this usluga");
         }

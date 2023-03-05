@@ -11,9 +11,7 @@ import com.tz.payment_api.repository.UslugaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class UslugaServiceImpl implements UslugaService {
@@ -38,7 +36,6 @@ public class UslugaServiceImpl implements UslugaService {
     @Override
     public List<UslugaDto> getAllUslugi() {
         List<Usluga> uslugi = uslugaRepository.findAll();
-        uslugi.forEach(System.out::println);
         return uslugaMapper.toUslugaDtoList(uslugi);
     }
 
