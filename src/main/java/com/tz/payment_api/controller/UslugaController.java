@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/uslugi")
+@RequestMapping
 public class UslugaController {
     private final UslugaService uslugaService;
     private final UslugaCategoryService uslugaCategoryService;
@@ -27,18 +27,18 @@ public class UslugaController {
         this.uslugaCategoryService = uslugaCategoryService;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/uslugi")
     public ResponseEntity<List<UslugaDto>> getAllUslugi() {
         List<UslugaDto> uslugi = uslugaService.getAllUslugi();
         return ResponseEntity.ok(uslugi);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/uslugi/{id}")
     public ResponseEntity<UslugaDto> getUslugaById(@PathVariable Long id) {
         UslugaDto usluga = uslugaService.getUslugaById(id);
         return ResponseEntity.ok(usluga);
     }
 
-    @GetMapping("/cat/{categoryId}")
+    @GetMapping("/uslugi/{categoryId}")
     public ResponseEntity<List<UslugaDto>> getUslugiByCategory(@PathVariable Long categoryId) {
         UslugaCategoryDto categoryDto = uslugaCategoryService.getCategoryById(categoryId);
         List<UslugaDto> uslugi = uslugaService.getUslugiByCategory(categoryDto);
@@ -51,7 +51,7 @@ public class UslugaController {
         return ResponseEntity.ok(categories);
     }
 
-    @GetMapping("/categories/{id}")
+    @GetMapping("categories/{id}")
     public ResponseEntity<UslugaCategoryDto> getCategoryById(@PathVariable Long id) {
         UslugaCategoryDto category = uslugaCategoryService.getCategoryById(id);
         return new ResponseEntity<>(category, HttpStatus.OK);
